@@ -2,8 +2,8 @@ package model;
 
 public class DailyTransmission {
 	 private int daiTransId;
+	 private int transSubId;
 	 private String date;
-	// private int transmissionSubId;
 	 private double quantity;
 
 	    public int getDaiTransId() {
@@ -13,7 +13,15 @@ public class DailyTransmission {
 	    public void setDaiTransId(int daiTransId) {
 	        this.daiTransId = daiTransId;
 	    }
+	
+            public int getTransSubId() {
+	        return transSubId;
+            }
 
+	    public void setTransSubId(int transSubId) {
+		this.transSubId = transSubId;
+	    }
+	
 	    public String getDate() {
 	        return date;
 	    }
@@ -34,6 +42,7 @@ public class DailyTransmission {
 	    public String toString() {
 	        return "DailyTransmission{" +
 	                "daiTransId=" + daiTransId +
+			"transSubId=" + transSubId +
 	                ", date='" + date + '\'' +
 	                ", quantity=" + quantity +
 	                '}';
