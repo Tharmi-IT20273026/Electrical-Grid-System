@@ -33,8 +33,9 @@ public class DailyTransmissionRepo {
                 while (rs.next()) {
                 	DailyTransmission los = new DailyTransmission();
                     los.setDaiTransId(rs.getInt(1));
-                    los.setReportDate(rs.getDate(2));
-                    los.setQuantity(rs.getDouble(3));
+                    los.setTransSubId(rs.getInt(2));
+                    los.setReportDate(rs.getDate(3));
+                    los.setQuantity(rs.getDouble(4));
 
                     dailyTransmissionList.add(los);
                 }
@@ -48,12 +49,13 @@ public class DailyTransmissionRepo {
         // insert into the database
 
        public void insertLocal(DailyTransmission dailyTransmission){
-         String sql = "insert into dailytransmission values (?,?,?) ";
+         String sql = "insert into dailytransmission values (?,?,?,?) ";
          try {
              PreparedStatement st = con.prepareStatement(sql);
              st.setInt(1,dailyTransmission.getDaiTransId());
-             st.setDate(2,dailyTransmission.getReportDate());
-             st.setDouble(3,dailyTransmission.getQuantity());
+             st.setInt(2,dailyTransmission.getTransSubId());
+             st.setDate(3,dailyTransmission.getReportDate());
+             st.setDouble(4,dailyTransmission.getQuantity());
          }catch (Exception e){
              System.out.println(e);
          }
@@ -61,13 +63,14 @@ public class DailyTransmissionRepo {
 
        //update the representation
     public void updatedailyTransmission(DailyTransmission dailyTransmission){
-        String sql = "update dailyTransmission set daiTransId=?,reportDate=?,quantity=? ";
+        String sql = "update dailyTransmission set daiTransId=?,transSubId=?,reportDate=?,quantity=? ";
         try {
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1,dailyTransmission.getDaiTransId());
-            st.setDate(2,dailyTransmission.getReportDate());
-            st.setDouble(3,dailyTransmission.getQuantity());
+            st.setInt(2,dailyTransmission.getTransSubId());
+            st.setDate(3,dailyTransmission.getReportDate());
+            st.setDouble(4,dailyTransmission.getQuantity());
         }catch (Exception e){
             System.out.println(e);
         }
