@@ -91,19 +91,5 @@ public class DailyTransmissionRepo {
         }
     }
 
-	public void insertDailyTransmission(DailyTransmission los) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void updateDailyTransmission(DailyTransmission los) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void deleteDailyTransmission(int daiTransId) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
