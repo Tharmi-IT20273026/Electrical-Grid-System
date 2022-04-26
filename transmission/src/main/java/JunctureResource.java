@@ -29,4 +29,7 @@ public class JunctureResource {
         repo.updatejuncture(los);
         return los;
     }
+
+    
+
 }
