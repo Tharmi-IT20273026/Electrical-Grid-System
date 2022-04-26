@@ -14,9 +14,7 @@ public class TransmissionResource {
 
        return repo.gettransmission();
 
-    }
-
-  
+    }  
 
     //post method
     @PUT
