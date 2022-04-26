@@ -14,11 +14,13 @@ public class TransmissionResource {
 
        return repo.gettransmission();
 
-    }  
+    }
+
+  
 
     //post method
     @PUT
-    @Path("/transmission")
+    @Path("/transmissions")
     @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     public Transmission updateTransmission(Transmission los){
         repo.updatetransmission(los);
