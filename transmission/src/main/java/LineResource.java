@@ -2,7 +2,7 @@ import java.util.List;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/line")
+@Path("/linedata")
 public class LineResource {
 	LineRepo repo =new LineRepo();
 
@@ -27,7 +27,7 @@ public class LineResource {
 
     //post method
     @PUT
-    @Path("/line")
+    @Path("/lines")
     @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     public Line updateLine(Line los){
         repo.updateLine(los);
@@ -36,7 +36,7 @@ public class LineResource {
 
     //delete method
     @DELETE
-    @Path("line/{lineId}")
+    @Path("linedata/{lineId}")
     public Line killLine(@PathParam("id") int lineId){
     	Line los = new Line();
 
