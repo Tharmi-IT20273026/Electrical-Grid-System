@@ -99,19 +99,4 @@ public class JunctureRepo {
         }
     }
 
-	public void insertJuncture(Juncture los) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void deleteTransmission(int juncId) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void updateJuncture(Juncture los) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
