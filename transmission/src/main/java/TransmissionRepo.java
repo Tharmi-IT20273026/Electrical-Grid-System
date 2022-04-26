@@ -94,20 +94,6 @@ public class TransmissionRepo {
         }
     }
 
-	public void insertTransmission(Transmission los) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void updateTransmission(Transmission los) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void deleteTransmission(int transSubId) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 }
